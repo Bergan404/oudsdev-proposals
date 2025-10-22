@@ -1,0 +1,80 @@
+---
+import "../styles/rr-styles.css";
+import "aos/dist/aos.css";
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>RoadRuler | Driver Compliance</title>
+    <link rel="icon" type="image/x-icon" href="/static/favicon.ico" />
+    <script
+      src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"
+      defer></script>
+    <script src="../js/RR-script.js" type="text/javascript"></script>
+    <script src="../js/compontents/navbar.js" type="text/javascript"></script>
+    <script src="../js/compontents/footer.js" type="text/javascript"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Raleway:wght@300;400;600&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="bg-gray-50">
+    <custom-navbar></custom-navbar>
+
+    <slot />
+    <script is:inline src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script is:inline>
+      window.addEventListener("DOMContentLoaded", () => {
+        AOS.init({
+          duration: 800,
+          easing: "ease-in-out",
+          once: true,
+        });
+        feather.replace();
+      });
+    </script>
+    <custom-footer></custom-footer>
+  </body>
+</html>
+
+<style is:global>
+  html,
+  body {
+    margin: 0;
+    width: 100%;
+    height: 100%;
+  }
+  body {
+    font-family: "Raleway", sans-serif;
+  }
+  .heading-font {
+    font-family: "Playfair Display", serif;
+  }
+  .hero-gradient {
+    background: linear-gradient(
+      135deg,
+      rgba(0, 0, 0, 0.8) 0%,
+      rgba(0, 0, 0, 0.4) 100%
+    );
+  }
+  .service-card:hover {
+    transform: translateY(-10px);
+    box-shadow:
+      0 20px 25px -5px rgba(0, 0, 0, 0.1),
+      0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  }
+</style>
+
+<!-- <script>
+  AOS.init({
+    duration: 800,
+    easing: "ease-in-out",
+    once: true,
+  });
+  feather.replace();
+</script> -->

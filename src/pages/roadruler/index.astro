@@ -1,0 +1,147 @@
+---
+import Layout_RR from "../../layouts/Layout-RR.astro";
+---
+
+<Layout_RR>
+  <main class="container mx-auto px-4 py-8">
+    <!-- Hero Section -->
+    <section class="text-center mb-12">
+      <h1 class="text-4xl md:text-5xl font-bold text-gray-800 mb-4">
+        Keep Your Fleet Compliant
+      </h1>
+      <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+        Streamline driver write-ups, automate notifications, and maintain
+        accountability with RoadRuler's intuitive management system.
+      </p>
+      <div class="mt-8">
+        <a
+          href="/login.html"
+          class="bg-blue-600 hover:bg-blue-700 text-white font-medium py-3 px-6 rounded-lg shadow-md transition duration-200 inline-flex items-center"
+        >
+          Get Started
+          <i data-feather="arrow-right" class="ml-2"></i>
+        </a>
+      </div>
+    </section>
+
+    <!-- Features Grid -->
+    <section class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
+      <div
+        class="bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition duration-200"
+      >
+        <div
+          class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-4"
+        >
+          <i data-feather="user" class="text-blue-600"></i>
+        </div>
+        <h3 class="text-xl font-semibold text-gray-800 mb-2">
+          Driver Profiles
+        </h3>
+        <p class="text-gray-600">
+          Track all incidents with visual counters showing progress toward
+          termination thresholds.
+        </p>
+      </div>
+
+      <div
+        class="bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition duration-200"
+      >
+        <div
+          class="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mb-4"
+        >
+          <i data-feather="alert-triangle" class="text-green-600"></i>
+        </div>
+        <h3 class="text-xl font-semibold text-gray-800 mb-2">
+          Automated Alerts
+        </h3>
+        <p class="text-gray-600">
+          Instant email notifications to drivers and managers for every incident
+          logged.
+        </p>
+      </div>
+
+      <div
+        class="bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition duration-200"
+      >
+        <div
+          class="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mb-4"
+        >
+          <i data-feather="file-text" class="text-purple-600"></i>
+        </div>
+        <h3 class="text-xl font-semibold text-gray-800 mb-2">PDF Reports</h3>
+        <p class="text-gray-600">
+          One-click export of complete driver history with attached evidence
+          photos.
+        </p>
+      </div>
+    </section>
+
+    <!-- Dashboard Preview -->
+    <section class="bg-white rounded-xl shadow-sm p-6 mb-12">
+      <div
+        class="flex flex-col md:flex-row justify-between items-start md:items-center mb-6"
+      >
+        <h2 class="text-2xl font-bold text-gray-800">Live Dashboard Preview</h2>
+        <div class="flex space-x-2 mt-4 md:mt-0">
+          <button class="px-4 py-2 bg-gray-100 rounded-lg text-sm font-medium"
+            >Safety</button
+          >
+          <button
+            class="px-4 py-2 bg-blue-600 text-white rounded-lg text-sm font-medium"
+            >Attendance</button
+          >
+          <button class="px-4 py-2 bg-gray-100 rounded-lg text-sm font-medium"
+            >Performance</button
+          >
+        </div>
+      </div>
+
+      <div class="overflow-x-auto">
+        <div
+          class="min-w-full grid grid-cols-12 gap-4 p-4 bg-gray-50 rounded-lg"
+        >
+          <!-- Header Row -->
+          <div class="col-span-3 font-medium text-gray-500">Driver</div>
+          <div class="col-span-2 font-medium text-gray-500 text-center">
+            Infractions
+          </div>
+          <div class="col-span-3 font-medium text-gray-500">Last Incident</div>
+          <div class="col-span-2 font-medium text-gray-500 text-center">
+            Status
+          </div>
+          <div class="col-span-2"></div>
+
+          <!-- Data Rows -->
+          <div class="col-span-3 flex items-center">
+            <img
+              src="http://static.photos/people/120x630/1"
+              alt="Driver"
+              class="w-10 h-10 rounded-full mr-3"
+            />
+            <span class="font-medium">Alex Johnson</span>
+          </div>
+          <div class="col-span-2 flex items-center justify-center">
+            <span
+              class="bg-red-100 text-red-800 px-3 py-1 rounded-full text-xs font-medium"
+              >2/3</span
+            >
+          </div>
+          <div class="col-span-3 text-sm text-gray-500">
+            Late delivery - 05/14
+          </div>
+          <div class="col-span-2 flex items-center justify-center">
+            <span
+              class="bg-yellow-100 text-yellow-800 px-3 py-1 rounded-full text-xs font-medium"
+              >Warning</span
+            >
+          </div>
+          <div class="col-span-2 flex justify-end">
+            <button class="text-blue-600 hover:text-blue-800">
+              <i data-feather="eye"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+</Layout_RR>
